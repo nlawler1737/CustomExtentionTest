@@ -1,0 +1,26 @@
+{
+    "manifest_version": 2,
+    "name": "Aeries What-If: Grade Calculator",
+    "description": "Edit current assignment and add new assignments to see possible future grade.",
+    "version": "1.0",
+    "icons": {
+        "16": "/images/aeriesWhatIf16.png",
+        "48": "/images/aeriesWhatIf48.png",
+        "128": "/images/aeriesWhatIf128.png"
+    },
+    "browser_action": {
+        "default_icon": {
+            "16": "/images/aeriesWhatIf16.png",
+            "48": "/images/aeriesWhatIf48.png",
+            "128": "/images/aeriesWhatIf128.png"
+
+        },
+        "default_popup": "popup.html",
+        "default_title": "Aeries What-If"
+    },
+    "content_scripts": [{
+        "matches": ["https://aeries.hughson.k12.ca.us/Parent/GradebookDetails.aspx"],
+        "js": ["content.js"],
+        "css": ["main.css"]
+    }]
+}
